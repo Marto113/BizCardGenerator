@@ -1,0 +1,18 @@
+nav {
+    color: gray;
+    display: left;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #FF9A5C;
+}

@@ -1,0 +1,4 @@
+npm i -D react-router-dom@latest
+npm install web-vitals
+npm install react-router
+npm install react
