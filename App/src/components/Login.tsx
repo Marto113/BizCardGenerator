@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 import '../styles/Main.css'
 import '../styles/Login.css'
 import { login } from '../api/LoginRequest.ts'
-
-async function LoginHandle (event: React.MouseEvent<HTMLButtonElement>) {
+async function LoginHandle () {
     const emailInput = document.getElementById("email") as HTMLInputElement;
     const passwordInput = document.getElementById("password") as HTMLInputElement;
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './Navbar';
+import PaymentForm from './PaymentForm';
+import { Link } from 'react-router-dom';
 
 const ImagePreview: React.FC = () => {
     const [isImageVisible, setImageVisible] = useState(false);
@@ -12,6 +14,7 @@ const ImagePreview: React.FC = () => {
     };
 
     const handleSecondButtonClick = () => {
+        // <PaymentForm />
         //setBlurred(false);
         //setButtonVisible(true);
     };
@@ -51,7 +54,9 @@ const ImagePreview: React.FC = () => {
           )}
           {isImageVisible && !isButtonVisible && (
             <div style={{ marginTop: '20px' }}>
-            <button onClick={handleSecondButtonClick}>Get Card</button>
+            <Link to="/payment">
+              <button onClick={handleSecondButtonClick}>Get Card</button>
+            </Link>
             </div>
           )}
         </div>

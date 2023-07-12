@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 // import '../styles/PaymentForm.css'
 
 const PaymentForm: React.FC = () => {
+  const [expiry, setExpiry] = React.useState(''); 
   const containerStyle: React.CSSProperties = {
     margin: 0,
     padding: '30px 10px',
@@ -48,6 +49,19 @@ const PaymentForm: React.FC = () => {
     verticalAlign: 'middle',
   };
 
+  // const handleExpiryChange = (event: ChangeEvent<HTMLInputElement>) => {
+  //   const input = event.target.value;
+  //   let formattedExpiry = input
+  //     .replace(/\D/g, '') // Remove non-numeric characters
+  //     .slice(0, 6); // Limit the input length to MMYYYY (6 characters)
+
+  //   const month = formattedExpiry.slice(0, 2);
+  //   const year = formattedExpiry.slice(2);
+  //   formattedExpiry = `${month}/${year}`;
+
+  //   setExpiry(formattedExpiry);
+  // };
+
   return (
     <div style={containerStyle}>
       <div style={cardStyle} className="card px-4">
@@ -80,7 +94,7 @@ const PaymentForm: React.FC = () => {
           <div className="col-6">
             <div className="d-flex flex-column">
               <p className="text mb-1">Expiry</p>
-              <input style={inputStyle} className="form-control mb-3" type="text" placeholder="MM/YYYY" />
+              <input style={inputStyle} className="form-control mb-3" type="text" placeholder="MM/YYYY"/>
             </div>
           </div>
           <div className="col-6" style={{ flexBasis: '50%' }}>
@@ -91,6 +105,7 @@ const PaymentForm: React.FC = () => {
       className="form-control mb-3 pt-2"
       type="password"
       placeholder="***"
+      maxLength={3} 
     />
   </div>
 </div>
